@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 
 
-const TodoList = ({ todos }) => (
+const TodoList = ({ todos, onRemove }) => (
     <ul>
         
         {todos.map(todo =>
             <Todo
                 key={todo.id}
-                text={todo.text}
-                completed={false}
+                todo={todo}
+                /*text={todo.text}
+                completed={false}*/
+                onReove={onRemove}
             />
         )}
     </ul>

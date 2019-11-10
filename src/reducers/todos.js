@@ -7,7 +7,7 @@ const todos = (state = initialState, action) => {
       case 'CHANGE_INPUT':
       return {
         ...state,
-        input: action.text
+        input: action.payload
       };
       case 'ADD_TODO':
         return {

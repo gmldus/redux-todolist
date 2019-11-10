@@ -7,16 +7,13 @@ const TodoContainer = () => {
     const dispatch = useDispatch();
     const { input, todos } = useSelector(state => state.todos, []);
 
-    const onChangeInput = () => dispatch({ type: changeInput });
+    const onChangeInput = input => dispatch(changeInput(input))
     const onInsert = () => dispatch({ type: addTodo });
 
-    const onChange = useCallback(
-    e => {
-            onChangeInput(e.target.value);
-            console.log(e.target.value);
-        },
-        [onChangeInput]
-    );
+    const onChange = e => {
+      onChangeInput(e.target.value);      
+      console.log(e.target.value);
+    }        
     
     const onSubmit = useCallback(
     e => {

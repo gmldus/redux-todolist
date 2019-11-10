@@ -8,6 +8,7 @@ export const changeInput = input => ({
     type: 'CHANGE_INPUT',
     payload:input 
 });
+
 export const addTodo = text => ({
     type: 'ADD_TODO',
     payload:{

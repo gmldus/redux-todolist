@@ -15,7 +15,6 @@ const TodoContainer = () => {
             onChangeInput(e.target.value);
             console.log(e.target.value);
     }
-    
     const onSubmit = e => {
             e.preventDefault();
             onInsert(input);

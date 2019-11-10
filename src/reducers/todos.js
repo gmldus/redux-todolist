@@ -9,6 +9,7 @@ const todos = (state = initialState, action) => {
           ...state,
           input: action.payload
         };
+
       case 'ADD_TODO':
         return {
           ...state,

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Todo = ({ todo,  onRemove }) => (
+const Todo = ({ todo,  onRemove, onToggle }) => (
     
     <li
         
@@ -9,7 +9,8 @@ const Todo = ({ todo,  onRemove }) => (
             textDecoration: todo.completed ? 'line-through' : 'none'
         }}
     >
-        {todo.text}
+        <span onClick={()=>onToggle(todo.id)}>{todo.text}</span>
+        
         
         <button onClick={()=>onRemove(todo.id)}>삭제</button>
     </li>

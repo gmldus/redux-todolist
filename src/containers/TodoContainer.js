@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeInput, addTodo, removeTodo } from '../actions/index';
+import { changeInput, addTodo, removeTodo, toggleTodo } from '../actions/index';
 import AddTodo from '../components/AddTodo';
 
 const TodoContainer = () => {
@@ -10,6 +10,7 @@ const TodoContainer = () => {
     const onChangeInput = input => dispatch(changeInput(input));
     const onInsert = input => dispatch(addTodo(input));
     const onRemove = id => dispatch(removeTodo(id));
+    const onToggle = id => dispatch(toggleTodo(id));
 
     const onChange = e => {
             onChangeInput(e.target.value);
@@ -29,6 +30,7 @@ const TodoContainer = () => {
           onChange={onChange}
           onSubmit={onSubmit}
           onRemove={onRemove}
+          onToggle={onToggle}
         />
       );
     };

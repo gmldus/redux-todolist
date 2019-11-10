@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 
 
-const TodoList = ({ todos, onRemove }) => (
+const TodoList = ({ todos, onRemove, onToggle }) => (
     <ul>
         
         {todos.map(todo =>
@@ -13,6 +13,7 @@ const TodoList = ({ todos, onRemove }) => (
                 /*text={todo.text}
                 completed={false}*/
                 onReove={onRemove}
+                onToggle={onToggle}
             />
         )}
     </ul>

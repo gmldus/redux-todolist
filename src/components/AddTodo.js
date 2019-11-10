@@ -2,7 +2,7 @@ import React from 'react';
 import TodoList from './TodoList';
 
 
-const AddTodo = ({ input, todos, onChange, onSubmit, onRemove}) => {
+const AddTodo = ({ input, todos, onChange, onSubmit, onRemove, onToggle }) => {
     
     return (
         <div>
@@ -12,7 +12,7 @@ const AddTodo = ({ input, todos, onChange, onSubmit, onRemove}) => {
                     Add Todo
                 </button>
             </form>
-            <TodoList todos={todos} onRemove={onRemove} ></TodoList>
+            <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} ></TodoList>
         </div>
         
     )

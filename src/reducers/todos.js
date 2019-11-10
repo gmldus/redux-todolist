@@ -23,7 +23,7 @@ const todos = (state = initialState, action) => {
         return {
           ...state,
           todos: state.todos.filter(
-            todo => todo.id !== action.id
+            todo => todo.id !== action.payload
           )
       };
       default:

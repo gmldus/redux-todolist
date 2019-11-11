@@ -12,7 +12,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => (
                 todo={todo}
                 /*text={todo.text}
                 completed={false}*/
-                onRemve={onRemove}
+                onRemove={onRemove}
                 onToggle={onToggle}
             />
         )}
